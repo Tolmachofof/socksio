@@ -26,7 +26,7 @@ def create_logger():
 if __name__ == '__main__':
     args = parse_args()
     logger = create_logger()
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+    #asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
     loop = asyncio.get_event_loop()
     loop.create_task(create_server(args.host, args.port))
     try:
